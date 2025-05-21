@@ -15,7 +15,7 @@ Blue='\033[0;34m'		# Blue
 ColorOff='\033[0m'		# Text Reset
 
 
-# Backgrounds SYLM87
+# Download backgrounds SYLM87
 mkdir -p /usr/share/backgrounds/sylm87
 wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background1.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background1.png
 wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background2.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background2.png
@@ -35,6 +35,11 @@ mkdir -p /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml
 wget --no-check-certificate -O /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/xfce4-power-manager.xml
 chown -R kali:kali /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml
 chmod 664 /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml
+
+# Setup background in XFCE kali user
+wget --no-check-certificate -O /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/xfce4-desktop.xml
+chown -R kali:kali /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+chmod 664 /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
 
 # Change hostname to kali due to vbox changing it
 current_hostname=$(hostname)
