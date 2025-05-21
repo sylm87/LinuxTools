@@ -45,6 +45,8 @@ chmod 664 /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
 
 # Setup config for Terminator terminal
 apt install terminator -y
+mkdir -p /home/kali/.config/terminator
+chown -R kali:kali /home/kali/.config/terminator
 wget --no-check-certificate -O /home/kali/.config/terminator/config https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/terminator_config
 chown -R kali:kali /home/kali/.config/terminator/config
 chmod 664 /home/kali/.config/terminator/config
