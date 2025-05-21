@@ -21,6 +21,8 @@ wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background1.png htt
 wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background2.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background2.png
 wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background3.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background3.png
 
+# Basic apt tools
+apt install nmon nload htop glances -y
 
 # Setup
 # Configuration of the terminal 
@@ -40,6 +42,16 @@ chmod 664 /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manage
 wget --no-check-certificate -O /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/xfce4-desktop.xml
 chown -R kali:kali /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
 chmod 664 /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+
+# Setup config for Terminator terminal
+apt install terminator -y
+wget --no-check-certificate -O /home/kali/.config/terminator/config https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/terminator_config
+chown -R kali:kali /home/kali/.config/terminator/config
+chmod 664 /home/kali/.config/terminator/config
+wget --no-check-certificate -O /home/kali/.config/xfce4/helpers.rc https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/helpers.rc
+chown -R kali:kali /home/kali/.config/xfce4/helpers.rc
+chmod 664 /home/kali/.config/xfce4/helpers.rc
+
 
 # Change hostname to kali due to vbox changing it
 current_hostname=$(hostname)

@@ -1,0 +1,28 @@
+[global_config]
+  handle_size = 2
+  geometry_hinting = True
+  scroll_tabbar = True
+  always_split_with_profile = True
+  cell_width = 1.2
+  cell_height = 1.2
+[keybindings]
+[profiles]
+  [[default]]
+    background_darkness = 0.95
+    cursor_fg_color = "#000000"
+    cursor_bg_color = "#57e389"
+    cursor_color_default = False
+    font = Liberation Mono 12
+    foreground_color = "#00ff00"
+    scrollback_infinite = True
+    palette = "#1f2229:#d41919:#5ebdab:#fea44c:#367bf0:#9755b3:#49aee6:#e6e6e6:#198388:#ec0101:#47d4b9:#ff8a18:#277fff:#962ac3:#05a1f7:#ffffff"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
