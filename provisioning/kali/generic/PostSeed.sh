@@ -14,6 +14,14 @@ Yellow='\033[0;33m'		# Yellow
 Blue='\033[0;34m'		# Blue
 ColorOff='\033[0m'		# Text Reset
 
+
+# Backgrounds SYLM87
+mkdir -p /usr/share/backgrounds/sylm87
+wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background1.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background1.png
+wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background2.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background2.png
+wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background3.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background3.png
+
+
 # Setup
 # Configuration of the terminal 
 mkdir -p /home/kali/.config/qterminal.org
