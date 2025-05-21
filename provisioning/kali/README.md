@@ -1,5 +1,7 @@
 # Types of machines
 
+# Original repo -> https://github.com/J0nan/RandomThings/tree/main/provisioning/kali/generic  (J0nan)
+
 ## [Generic](./generic/README.md)
 
 This installs and configures a kali with:
