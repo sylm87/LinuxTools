@@ -20,6 +20,9 @@ mkdir -p /usr/share/backgrounds/sylm87
 wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background1.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background1.png
 wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background2.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background2.png
 wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background3.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background3.png
+wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background4.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background4.png
+wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background5.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background5.png
+wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background6.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background6.png
 wget --no-check-certificate -O /usr/share/backgrounds/sylm87/login.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/login.png
 wget --no-check-certificate -O /usr/share/backgrounds/sylm87/login2.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/login2.png
 
