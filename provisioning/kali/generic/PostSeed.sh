@@ -20,6 +20,9 @@ mkdir -p /usr/share/backgrounds/sylm87
 wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background1.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background1.png
 wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background2.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background2.png
 wget --no-check-certificate -O /usr/share/backgrounds/sylm87/background3.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/background3.png
+wget --no-check-certificate -O /usr/share/backgrounds/sylm87/login.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/login.png
+wget --no-check-certificate -O /usr/share/backgrounds/sylm87/login2.png https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/fondos/login2.png
+
 
 # Basic apt tools
 apt install nmon nload htop glances -y
@@ -42,6 +45,10 @@ chmod 664 /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manage
 wget --no-check-certificate -O /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/xfce4-desktop.xml
 chown -R kali:kali /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
 chmod 664 /home/kali/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+
+# Setup background in XFCE login
+wget --no-check-certificate -O /etc/lightdm/lightdm-gtk-greeter.conf https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/kali/generic/lightdm-gtk-greeter.conf
+chmod 664 /etc/lightdm/lightdm-gtk-greeter.conf
 
 # Setup config for Terminator terminal
 apt install terminator -y
