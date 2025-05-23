@@ -195,6 +195,12 @@ ln -s /opt/corsy/corsy.py /usr/bin/corsy
 echo -e "${Blue}[*] Installing EyeWitness${ColorOff}"
 apt install eyewitness -y
 
+# Caido
+latest_release_caido=$(curl -s "https://api.github.com/repos/caido/caido/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+RL_DEB_CAIDO="https://caido.download/releases/${latest_release_caido}/caido-desktop-${latest_release_caido}-linux-x86_64.deb"
+wget --no-check-certificate -O /tmp/caido.deb ${URL_DEB_CAIDO}
+apt install /tmp/caido.deb -y
+
 # Infrastructure tools
 # Onesixtyone (SNMP)
 echo -e "${Blue}[*] Installing onesixtyone${ColorOff}"
@@ -260,3 +266,6 @@ ln -s /opt/airgeddon/airgeddon.sh /usr/bin/airgeddon
 # COOK
 echo -e "${Blue}[*] Installing COOK${ColorOff}"
 go install github.com/glitchedgitz/cook/v2/cmd/cook@latest
+
+
+
