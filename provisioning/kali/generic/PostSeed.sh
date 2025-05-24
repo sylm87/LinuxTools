@@ -110,7 +110,7 @@ go env -w GOBIN="/opt/go/bin"
 echo -en 'export PATH="$PATH:/usr/local/go/bin:/opt/go/bin"\ngo env -w GOBIN="/opt/go/bin"' >>/etc/profile
 
 # Docker + docker compose
-apt remove docker.io docker-compose -y
+apt remove docker.io docker-compose -y 
 apt update
 apt install ca-certificates curl -y
 install -m 0755 -d /etc/apt/keyrings
