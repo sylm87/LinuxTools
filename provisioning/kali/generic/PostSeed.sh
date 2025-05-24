@@ -77,6 +77,14 @@ if [ "$current_hostname" == "vbox" ]; then
 fi
 
 # General purpose tools
+# GPG
+echo -e "${Blue}[*] Installing gpg ${ColorOff}"
+apt install gpg -y
+
+# Libreoffice
+echo -e "${Blue}[*] Installing libreoffice ${ColorOff}"
+apt install libreoffice libreoffice-l10n-es libreoffice-help-es -y
+
 # Python3 and PIP3
 echo -e "${Blue}[*] Installing python3 ${ColorOff}"
 apt install python3 python3-venv -y
@@ -84,6 +92,16 @@ apt install python3 python3-venv -y
 # git
 echo -e "${Blue}[*] Installing git${ColorOff}"
 apt install git -y
+
+# Visual studio Code
+echo -e "${Blue}[*] Installing Visual Studio Code${ColorOff}"
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+rm -f packages.microsoft.gpg
+apt install apt-transport-https -y
+apt update -y
+apt install code -y
 
 # Go
 echo -e "${Blue}[*] Installing go and dependencies (BETA)${ColorOff}"
