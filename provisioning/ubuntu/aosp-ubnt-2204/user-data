@@ -1,0 +1,39 @@
+#cloud-config
+autoinstall:
+  version: 1
+
+  identity:
+    hostname: ubnt-aosp-dev
+    username: usuario
+    password: $6$sPpMYlQP1m3yQy8W$gOnHy20WQ7Qfbb/Oi1fFGMo5Wy8b0aQV5l8qR0mo04ts4V3xs2/sOesGgY4HeAdiaJQHg9U7StSfBjEcDM5J7/
+
+  locale: es_ES.UTF-8
+  keyboard:
+    layout: es
+    variant: ''
+
+  ssh:
+    install-server: true
+    allow-pw: true
+
+  storage:
+    layout:
+      name: direct
+
+  updates:
+    security: true
+
+  apt:
+    primary:
+      - arches: [amd64]
+        uri: http://archive.ubuntu.com/ubuntu
+
+  packages:
+    - curl
+    - wget
+
+  late-commands:
+    # Descarga un script desde un servidor HTTP y lo ejecuta dentro del sistema instalado
+    - curtin in-target -- curl -o /root/postinst.sh https://raw.githubusercontent.com/sylm87/LinuxTools/refs/heads/main/provisioning/ubuntu/aosp-ubnt-2204/PostSeed.sh
+    - curtin in-target -- chmod +x /root/postinst.sh
+    - curtin in-target -- /bin/bash /root/postinst.sh
