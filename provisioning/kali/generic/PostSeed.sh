@@ -83,7 +83,7 @@ apt install gpg -y
 
 # Libreoffice
 echo -e "${Blue}[*] Installing libreoffice ${ColorOff}"
-apt install libreoffice libreoffice-l10n-es libreoffice-help-es -y
+apt install libreoffice -y
 
 # Python3 and PIP3
 echo -e "${Blue}[*] Installing python3 ${ColorOff}"
