@@ -101,7 +101,7 @@ echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft
 rm -f packages.microsoft.gpg
 apt install apt-transport-https -y
 apt update -y
-apt install code -y
+apt install code -y 
 
 # Go
 echo -e "${Blue}[*] Installing go and dependencies (BETA)${ColorOff}"
