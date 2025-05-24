@@ -196,6 +196,7 @@ echo -e "${Blue}[*] Installing EyeWitness${ColorOff}"
 apt install eyewitness -y
 
 # Caido
+echo -e "${Blue}[*] Installing CAIDO${ColorOff}"
 latest_release_caido=$(curl -s "https://api.github.com/repos/caido/caido/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 URL_DEB_CAIDO="https://caido.download/releases/${latest_release_caido}/caido-desktop-${latest_release_caido}-linux-x86_64.deb"
 wget --no-check-certificate -O /tmp/caido.deb ${URL_DEB_CAIDO}
