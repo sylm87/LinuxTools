@@ -83,7 +83,7 @@ apt install gpg -y
 
 # Libreoffice
 echo -e "${Blue}[*] Installing libreoffice ${ColorOff}"
-apt install libreoffice -y
+DEBIAN_FRONTEND=noninteractive apt install -y libreoffice-core libreoffice-writer libreoffice-calc
 
 # Python3 and PIP3
 echo -e "${Blue}[*] Installing python3 ${ColorOff}"
@@ -170,6 +170,7 @@ ln -s /.local/share/pipx/venvs/wafw00f/bin/wafw00f /usr/bin/wafw00f
 # httpx
 echo -e "${Blue}[*] Installing httpx${ColorOff}"
 apt remove httpx -y
+rm /usr/bin/httpx
 go install github.com/projectdiscovery/httpx/cmd/httpx@latest
 
 # Dirb
@@ -214,6 +215,16 @@ ln -s /opt/corsy/corsy.py /usr/bin/corsy
 # EyeWitness
 echo -e "${Blue}[*] Installing EyeWitness${ColorOff}"
 apt install eyewitness -y
+
+# git-dumper
+echo -e "${Blue}[*] Installing git-dumper${ColorOff}"
+mkdir -p /opt/git-dumper
+curl -s -k https://api.github.com/repos/holly-hacker/git-dumper/releases/latest \
+| grep "browser_download_url.*linux\"" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget --no-check-certificate -O /opt/git-dumper/git-dumper -qi -
+ln -s /opt/git-dumper/git-dumper /usr/bin/git-dumper
 
 # Caido
 echo -e "${Blue}[*] Installing CAIDO${ColorOff}"
@@ -275,6 +286,20 @@ apt install jadx -y
 # Google Android Tools
 echo -e "${Blue}[*] Installing Google Android Tools${ColorOff}"
 apt install google-android-platform-tools-installer -y
+
+# scrcpy
+echo -e "${Blue}[*] Installing scrcpy${ColorOff}"
+mkdir -p /opt/scrcpy
+curl -s -k https://api.github.com/repos/Genymobile/scrcpy/releases/latest \
+| grep "browser_download_url.*linux\-x86_64.*\"" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget --no-check-certificate -O /opt/scrcpy/scrcpy-linux.tar.gz -qi -
+tar -xzf /opt/scrcpy/scrcpy-linux.tar.gz -C /opt/scrcpy
+rm /opt/scrcpy/scrcpy-linux.tar.gz
+mv /opt/scrcpy/scrcpy-linux-x86_64*/* /opt/scrcpy
+rm -r /opt/scrcpy/scrcpy-linux-x86_64*
+ln -s /opt/scrcpy/scrcpy /usr/bin/scrcpy
 
 # WiFi tools
 # Airgeddon
