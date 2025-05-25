@@ -81,9 +81,9 @@ fi
 echo -e "${Blue}[*] Installing gpg ${ColorOff}"
 apt install gpg -y
 
-# Libreoffice
-echo -e "${Blue}[*] Installing libreoffice ${ColorOff}"
-DEBIAN_FRONTEND=noninteractive apt install -y libreoffice-core libreoffice-writer libreoffice-calc
+# # Libreoffice
+# echo -e "${Blue}[*] Installing libreoffice ${ColorOff}"
+# apt install -y libreoffice-core libreoffice-writer libreoffice-calc
 
 # Python3 and PIP3
 echo -e "${Blue}[*] Installing python3 ${ColorOff}"
