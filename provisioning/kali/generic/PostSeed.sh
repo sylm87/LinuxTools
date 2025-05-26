@@ -55,6 +55,7 @@ apt install \
     libxcursor1 \
     libxinerama1 \
     libxrender1 \
+    glx-alternative-mesa \
     vulkan-tools -y
 
 # Setup
