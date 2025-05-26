@@ -114,6 +114,10 @@ apt install gpg -y
 echo -e "${Blue}[*] Installing python3 ${ColorOff}"
 apt install python3 python3-venv -y
 
+# ssh
+echo -e "${Blue}[*] Installing ssh${ColorOff}"
+apt install ssh -y
+
 # git
 echo -e "${Blue}[*] Installing git${ColorOff}"
 apt install git -y
