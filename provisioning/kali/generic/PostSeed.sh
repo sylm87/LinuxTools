@@ -345,10 +345,8 @@ apt install default-jdk default-jre -y
 
 # ghidra
 echo -e "${Blue}[*] Installing ghidra${ColorOff}"
-GHIDRA_URL_RELEASE="https://api.github.com/repos/NationalSecurityAgency/ghidra/releases/latest"
-RELEASE_JSON=$(curl -s "${GHIDRA_URL_RELEASE}")
-# Extraer la URL del ZIP que tenga el formato ghidra_*_PUBLIC_*.zip
-ZIP_URL=$(echo "${RELEASE_JSON}" | grep "browser_download_url" | grep -Eo 'https://[^"]+ghidra_[0-9]+\.[0-9]+\.[0-9]+_PUBLIC_[0-9]+\.zip')
+ZIP_URL=$(curl -s -k "https://api.github.com/repos/NationalSecurityAgency/ghidra/releases/latest" \
+| grep "browser_download_url" | grep -Eo 'https://[^"]+ghidra_[0-9]+\.[0-9]+\.[0-9]+_PUBLIC_[0-9]+\.zip')
 FILENAME_ZIP=$(basename "$ZIP_URL")
 curl -L -o "${FILENAME_ZIP}" "${ZIP_URL}"
 unzip "${FILENAME_ZIP}" -d "ghidra"
