@@ -303,6 +303,10 @@ rm -r /opt/scrcpy/scrcpy-linux-x86_64*
 chmod +x /opt/scrcpy/scrcpy
 ln -s /opt/scrcpy/scrcpy /usr/bin/scrcpy
 
+# java jdk/jre
+echo -e "${Blue}[*] Installing JDK/JRE${ColorOff}"
+apt install default-jdk default-jre -y
+
 # ghidra
 echo -e "${Blue}[*] Installing ghidra${ColorOff}"
 GHIDRA_URL_RELEASE="https://api.github.com/repos/NationalSecurityAgency/ghidra/releases/latest"
