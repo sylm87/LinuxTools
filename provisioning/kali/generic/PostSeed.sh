@@ -33,7 +33,7 @@ wget --no-check-certificate -O /usr/share/backgrounds/sylm87/login2.png https://
 apt install nmon nload htop glances -y
 
 # Vulkan and 3D acceleration
-apt install -y \
+apt install \
     libvulkan1 \
     libvkd3d-utils1 \
     mesa-vulkan-drivers \
@@ -51,11 +51,11 @@ apt install -y \
     libxcomposite1 \
     libxdamage1 \
     libxext6 \
-    libxfixes3 \ 
+    libxfixes3 \
     libxcursor1 \
     libxinerama1 \
     libxrender1 \
-    vulkan-tools
+    vulkan-tools -y
 
 # Setup
 # Configuration of the terminal 
