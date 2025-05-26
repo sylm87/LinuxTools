@@ -34,29 +34,35 @@ apt install nmon nload htop glances -y
 
 # Vulkan and 3D acceleration
 apt install \
-    libvulkan1 \
-    libvkd3d-utils1 \
-    mesa-vulkan-drivers \
-    libglx-mesa0 \
-    libgl1-mesa-dri \
-    libgles2-mesa-dev \
-    libx11-xcb1 \
-    libxcb1 \
-    libxcb-glx0 \
-    libxcb-keysyms1 \
-    libxcb-present0 \
-    libxcb-dri3-0 \
-    libxrandr2 \
-    libxi6 \
-    libxcomposite1 \
-    libxdamage1 \
-    libxext6 \
-    libxfixes3 \
-    libxcursor1 \
-    libxinerama1 \
-    libxrender1 \
-    glx-alternative-mesa \
-    vulkan-tools -y
+  glx-alternative-mesa \
+  libdrm2 \
+  libegl1 \
+  libgl1 \
+  libgl1-mesa-dri \
+  libgles2 \
+  libgles2-mesa-dev \
+  libglx-mesa0 \
+  libvkd3d-utils1 \
+  libvulkan1 \
+  libx11-xcb1 \
+  libxcb1 \
+  libxcb-dri3-0 \
+  libxcb-glx0 \
+  libxcb-keysyms1 \
+  libxcb-present0 \
+  libxcomposite1 \
+  libxcursor1 \
+  libxdamage1 \
+  libxext6 \
+  libxfixes3 \
+  libxi6 \
+  libxinerama1 \
+  libxrandr2 \
+  libxrender1 \
+  mesa-utils \
+  mesa-vulkan-drivers \
+  vulkan-tools \
+  x11-utils -y
 
 # Setup
 # Configuration of the terminal 
