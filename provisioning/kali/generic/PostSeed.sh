@@ -32,6 +32,31 @@ wget --no-check-certificate -O /usr/share/backgrounds/sylm87/login2.png https://
 # Basic apt tools
 apt install nmon nload htop glances -y
 
+# Vulkan and 3D acceleration
+apt install -y \
+    libvulkan1 \
+    libvkd3d-utils1 \
+    mesa-vulkan-drivers \
+    libglx-mesa0 \
+    libgl1-mesa-dri \
+    libgles2-mesa-dev \
+    libx11-xcb1 \
+    libxcb1 \
+    libxcb-glx0 \
+    libxcb-keysyms1 \
+    libxcb-present0 \
+    libxcb-dri3-0 \
+    libxrandr2 \
+    libxi6 \
+    libxcomposite1 \
+    libxdamage1 \
+    libxext6 \
+    libxfixes3 \ 
+    libxcursor1 \
+    libxinerama1 \
+    libxrender1 \
+    vulkan-tools
+
 # Setup
 # Configuration of the terminal 
 mkdir -p /home/kali/.config/qterminal.org
