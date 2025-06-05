@@ -33,36 +33,36 @@ wget --no-check-certificate -O /usr/share/backgrounds/sylm87/login2.png https://
 apt install nmon nload htop glances -y
 
 # Vulkan and 3D acceleration
-apt install \
-  glx-alternative-mesa \
-  libdrm2 \
-  libegl1 \
-  libgl1 \
-  libgl1-mesa-dri \
-  libgles2 \
-  libgles2-mesa-dev \
-  libglx-mesa0 \
-  libvkd3d-utils1 \
-  libvulkan1 \
-  libx11-xcb1 \
-  libxcb1 \
-  libxcb-dri3-0 \
-  libxcb-glx0 \
-  libxcb-keysyms1 \
-  libxcb-present0 \
-  libxcomposite1 \
-  libxcursor1 \
-  libxdamage1 \
-  libxext6 \
-  libxfixes3 \
-  libxi6 \
-  libxinerama1 \
-  libxrandr2 \
-  libxrender1 \
-  mesa-utils \
-  mesa-vulkan-drivers \
-  vulkan-tools \
-  x11-utils -y
+# apt install \
+#   glx-alternative-mesa \
+#   libdrm2 \
+#   libegl1 \
+#   libgl1 \
+#   libgl1-mesa-dri \
+#   libgles2 \
+#   libgles2-mesa-dev \
+#   libglx-mesa0 \
+#   libvkd3d-utils1 \
+#   libvulkan1 \
+#   libx11-xcb1 \
+#   libxcb1 \
+#   libxcb-dri3-0 \
+#   libxcb-glx0 \
+#   libxcb-keysyms1 \
+#   libxcb-present0 \
+#   libxcomposite1 \
+#   libxcursor1 \
+#   libxdamage1 \
+#   libxext6 \
+#   libxfixes3 \
+#   libxi6 \
+#   libxinerama1 \
+#   libxrandr2 \
+#   libxrender1 \
+#   mesa-utils \
+#   mesa-vulkan-drivers \
+#   vulkan-tools \
+#   x11-utils -y
 
 # Setup
 # Configuration of the terminal 
